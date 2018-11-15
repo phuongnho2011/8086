@@ -6,14 +6,17 @@ main proc
      mov ax,data
      mov ds,ax
      mov ax,02h
-     int 10h
+     int 10h 
+     
+begin:    
+
      mov dh,1
      mov dl,1
      
 lap: 
      
      mov ah,02h
-     int 10h
+     int 10h 
      
      push dx
      mov dl,'A'
@@ -23,16 +26,16 @@ lap:
      
      call delay
            
-     mov ah,02h
-     int 10h
-     push dx
-     mov dl,' '
-     mov ah,02h
-     int 21h
-     pop dx
+     ;mov ah,02h
+     ;int 10h
+     ;push dx
+     ;mov dl,' '
+     ;mov ah,02h
+     ;int 21h
+     ;pop dx
    
      inc dl
-     cmp dl,10
+     cmp dl,11
      jne lap 
      
 lap1:
@@ -48,13 +51,13 @@ lap1:
      
      call delay
            
-     mov ah,02h
-     int 10h
-     push dx
-     mov dl,' '
-     mov ah,02h
-     int 21h
-     pop dx
+     ;mov ah,02h
+     ;int 10h
+     ;push dx
+     ;mov dl,' '
+     ;mov ah,02h
+     ;int 21h
+     ;pop dx
    
      inc dh
      dec dl
@@ -74,16 +77,16 @@ lap2:
      
      call delay
            
-     mov ah,02h
-     int 10h
-     push dx
-     mov dl,' '
-     mov ah,02h
-     int 21h
-     pop dx
+     ;mov ah,02h
+     ;int 10h
+     ;push dx
+     ;mov dl,' '
+     ;mov ah,02h
+     ;int 21h
+     ;pop dx
    
      inc dh
-     cmp dh,20
+     cmp dh,21
      jne lap2 
      
 lap3:
@@ -99,17 +102,17 @@ lap3:
      
      call delay
            
-     mov ah,02h
-     int 10h
-     push dx
-     mov dl,' '
-     mov ah,02h
-     int 21h
-     pop dx
+     ;mov ah,02h
+     ;int 10h
+     ;push dx
+     ;mov dl,' '
+     ;mov ah,02h
+     ;int 21h
+     ;pop dx
    
      dec dh
      inc dl
-     cmp dh,10
+     cmp dh,11
      jne lap3
      
 lap4:
@@ -125,20 +128,20 @@ lap4:
      
      call delay
            
-     mov ah,02h
-     int 10h
-     push dx
-     mov dl,' '
-     mov ah,02h
-     int 21h
-     pop dx
+     ;mov ah,02h
+     ;int 10h
+     ;push dx
+     ;mov dl,' '
+     ;mov ah,02h
+     ;int 21h
+     ;pop dx
    
      dec dh
      dec dl
      cmp dh,1
      jne lap4
      
-     jmp lap
+     jmp begin
           
 exit:
      mov ah,4Ch

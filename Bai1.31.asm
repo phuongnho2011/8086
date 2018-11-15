@@ -23,17 +23,17 @@ lap:
      
      call delay
            
-     mov ah,02h
-     int 10h
-     push dx
-     mov dl,' '
-     mov ah,02h
-     int 21h
-     pop dx
+     ;mov ah,02h
+     ;int 10h
+     ;push dx
+     ;mov dl,' '
+     ;mov ah,02h
+     ;int 21h
+     ;pop dx
      
      inc dh
      dec dl
-     cmp dl,1
+     cmp dl,0
      jne lap
      
 exit:

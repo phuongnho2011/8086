@@ -15,6 +15,9 @@ main proc
     
     mov ah, 09h
     lea dx, msg
+    int 21h 
+    
+    mov ah, 4Ch
     int 21h
     
 main endp  

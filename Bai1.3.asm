@@ -12,6 +12,8 @@ main proc
     mov ax,154h
     mov dx,289h
     mul dx
+    mov ah,4Ch
+    int 21h
 main endp
     
     

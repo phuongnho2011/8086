@@ -17,6 +17,9 @@ main proc
     lea dx, msg
     int 21h
     
+    mov ah,4Ch
+    int 21h
+    
 main endp  
 ;-------------
 End main
